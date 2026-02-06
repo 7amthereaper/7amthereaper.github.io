@@ -10,7 +10,7 @@ thumbnail: /assets/images/xworm-thumbnail.png
 XWorm is a MaaS multifunctional RAT that was first discovered in 2022 with wide range of capabilities.<br>
 <span style="color: white;">*sample hash: `e4c179fa5bc03b07e64e65087afcbad04d40475204ebb0a0bc7d77f071222656`*
  </span> <br>
-<span style="color: white;">*malware bazzar: `[e4c179fa5bc03b07e64e65087afcbad04d40475204ebb0a0bc7d77f071222656](https://bazaar.abuse.ch/sample/e4c179fa5bc03b07e64e65087afcbad04d40475204ebb0a0bc7d77f071222656/)`*
+<span style="color: white;">*malware bazzar: `bazaar.abuse.ch/sample/e4c179fa5bc03b07e64e65087afcbad04d40475204ebb0a0bc7d77f071222656`*
  </span>
  
 ### static analysis
