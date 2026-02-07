@@ -7,28 +7,28 @@ thumbnail: /assets/images/xworm-thumbnail.png
 ---
 
 ## XWorm RAT 
-XWorm is a MaaS multifunctional RAT that was first discovered in 2022 with wide range of capabilities.<br>
+XWorm is a MaaS multifunctional RAT that was first discovered in 2022 with a wide range of capabilities.<br>
 *sample hash: `e4c179fa5bc03b07e64e65087afcbad04d40475204ebb0a0bc7d77f071222656`* <br>
 *malware bazzar: `bazaar.abuse.ch/sample/e4c179fa5bc03b07e64e65087afcbad04d40475204ebb0a0bc7d77f071222656`* <br>
  
 ### static analysis
-this PowerShell script was sort of interesting, if we looked closely we would find that these two hex values are PE files, because they start with **[4D 5A]**, which is the magic bytes for MZ hdr.
+this PowerShell script was sort of interesting, if we looked closely we would find that these two hex values are PE files, because they start with **[4D 5A]**, wwhich are the magic bytes for the MZ header.
 
 this is a common technique where one of them PEs is just a loader, and the other one is the actual payload.
 ![image](/assets/images/1.PNG)
-how do we know the loader from the actual payload? if we looked closely we can conclude that `$YHYA` is the actual payload, that's because it was loaded to the memory (that simple!), that was later injected to RegSvcs.exe which's the loader.
+how do we differentiate the loader from the actual payload? if we looked closely we can conclude that `$YHYA` is the actual payload, that's because it was loaded into memory (that simple!), twhich was later injected into RegSvcs.exe, which is the loader.
 
 
 ![image](/assets/images/2.PNG)
-and this a scheduler that runs this script every 2 mins.
+and this a schedule task that runs this script every 2 mins.
 
 
 ![image](/assets/images/3.PNG)
-simple obfuscation. i replaced the "!" signs and saved it as "xworm.file" so i can't accidentally run it analyzing the code. 
+simple obfuscation. i replaced the "!" signs and saved it as "xworm.file" so I don’t accidentally run it while analyzing the code.. 
 
 
 ![image](/assets/images/4.png)
-<p align="center">here's the scan for both, first one on the left is the ps script, the second is after extracting the payload.</p>
+<p align="center">here are the scans for both files;, first one on the left is the ps script, the second is after extracting the payload.</p>
 <br>
 
 ![image](/assets/images/5.PNG)
