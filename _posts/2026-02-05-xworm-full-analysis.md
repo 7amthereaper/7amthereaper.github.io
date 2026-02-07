@@ -10,7 +10,11 @@ thumbnail: /assets/images/xworm-thumbnail.png
 XWorm is a MaaS multifunctional RAT that was first discovered in 2022 with a wide range of capabilities.<br>
 *sample hash: `e4c179fa5bc03b07e64e65087afcbad04d40475204ebb0a0bc7d77f071222656`* <br>
 *malware bazzar: `bazaar.abuse.ch/sample/e4c179fa5bc03b07e64e65087afcbad04d40475204ebb0a0bc7d77f071222656`* <br>
- 
+ <br>
+![image](/assets/images/XWorm Infection chain.png)
+<p align="center">infection chain </p>
+
+
 ### static analysis
 this PowerShell script was sort of interesting, if we looked closely we would find that these two hex values are PE files, because they start with **[4D 5A]**, wwhich are the magic bytes for the MZ header.
 
