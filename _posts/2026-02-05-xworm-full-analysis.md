@@ -82,11 +82,11 @@ the behavioral analysis also reveals additional capabilities of this RAT.<br>
 
 ### behavioral analysis
 after setting up my monitoring tools and opening the sample, and analyzing the  behavioral activities, i noticed tons of system changes, registry changes; tons of keys being read/deleted/changed/added,<br>
-logs being deleted, files being added, and shockingly my keystrokes was being keylogged.<br>
+logs being deleted, files being added, and shockingly my keystrokes were being keylogged :D.<br>
 here's what i came up with..<br><br>
 
 
-to keep persistency, as we saw at the code analysis section, xowrm copied itself a couple of times at `User\AppData\Roaming` and copying itself at startup
+to keep persistency, as we saw at the code analysis section, xowrm copied itself a couple of times at `User\AppData\Roaming` also at  startup.
 ![image](/assets/images/writefilefilterd.PNG)
 ![image](/assets/images/ratinroaming folder.PNG)
 ![image](/assets/images/startup folder.PNG)<br><br>
